@@ -49,7 +49,7 @@ namespace CSCore.Ffmpeg
                     throw new PlatformNotSupportedException();
             }
 
-            var assemblyDirectory = Path.GetDirectoryName(Assembly.GetEntryAssembly().Location);
+            var assemblyDirectory = Path.GetDirectoryName($"{AppContext.BaseDirectory}");
             if (assemblyDirectory != null)
             {
                 string path = Path.Combine(
